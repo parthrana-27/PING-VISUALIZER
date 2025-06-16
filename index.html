@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Diagnostic Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Network Diagnostic Tool</h2>
+            <div class="input-group">
+                <input type="text" id="target" placeholder="Enter IP or Hostname (e.g., google.com, 8.8.8.8)">
+                <div class="button-group">
+                    <button id="pingBtn">Ping</button>
+                    <button id="tracerouteBtn">Traceroute</button>
+                    <button id="resetBtn" class="reset">Reset</button>
+                </div>
+            </div>
+            <div class="status-bar">
+                <span id="status">Status: Ready</span>
+            </div>
+        </div>
+
+        <div class="output-container">
+            <div class="card">
+                <h3>Command Output</h3>
+                <textarea id="output" readonly></textarea>
+            </div>
+            <div class="card">
+                <h3>Geolocation Data</h3>
+                <textarea id="geoOutput" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>RTT Variation</h3>
+            <canvas id="rttChart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
